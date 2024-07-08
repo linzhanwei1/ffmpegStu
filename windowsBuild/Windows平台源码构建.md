@@ -484,16 +484,16 @@ NOTE: Object files are built at the place where configure is launched.
 
 - 开始编译源码
 ```
-./configure --toolchain=msvc --enable-yasm --enable-asm --enable-shared --prefix=/usr/local/ffmpeg431
+./configure --toolchain=msvc --enable-x86asm --enable-asm --enable-shared --prefix=/usr/local/ffmpeg431
 ```
 
 ## 生成ffmpeg帮助文档
 - [doxygen下载](https://www.doxygen.nl/download.html)[Graphviz下载](https://graphviz.gitlab.io/_pages/Download/windows/graphviz-2.38.msi)
 - 打开 Doxywizard<br>
 ![Doxywizard](images/Doxywizard.png)
-- Mode选项卡
+- Mode选项卡<br>
 ![Mode](images/Mode.png)
-- Output选项卡
+- Output选项卡<br>
 ![Output](images/Output.png)
-- Diagrams选项卡
+- Diagrams选项卡<br>
 ![Diagrams](images/Diagrams.png)
