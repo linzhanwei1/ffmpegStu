@@ -490,10 +490,10 @@ NOTE: Object files are built at the place where configure is launched.
 ## 生成ffmpeg帮助文档
 - [doxygen下载](https://www.doxygen.nl/download.html)[Graphviz下载](https://graphviz.gitlab.io/_pages/Download/windows/graphviz-2.38.msi)
 - 打开 Doxywizard<br>
-![Doxywizard](images\Doxywizard.png)
+![Doxywizard](images/Doxywizard.png)
 - Mode选项卡
-![Mode](images\Mode.png)
+![Mode](images/Mode.png)
 - Output选项卡
-![Output](images\Output.png)
+![Output](images/Output.png)
 - Diagrams选项卡
-![Diagrams](images\Diagrams.png)
+![Diagrams](images/Diagrams.png)
