@@ -484,7 +484,23 @@ NOTE: Object files are built at the place where configure is launched.
 
 - 开始编译源码
 ```
-./configure --toolchain=msvc --enable-x86asm --enable-asm --enable-shared --prefix=/usr/local/ffmpeg431
+./configure --toolchain=msvc --enable-x86asm --enable-asm --enable-shared --enable-shared --enable-sdl2 --prefix=windows_x86_mingw
+```
+
+## 添加extern依赖库
+### 引入SDL扩展
+- SDL库
+[SDL库下载需要适配具体ffmpeg版本](https://github.com/libsdl-org/SDL/releases/tag/release-2.0.18)
+```
+pacman -S mingw-w64-x86_64-SDL2
+```
+```
+pacman -S mingw-w64-i686-SDL2 
+```
+
+- 查看安装位置
+```
+pacman -Ql mingw-w64-i686-SDL2
 ```
 
 ## 生成ffmpeg帮助文档
