@@ -18,6 +18,7 @@
 ```
 - 更新源,安装依赖组件
 ```sh
+pacman -Syuu
 pacman -S mingw-w64-x86_64-toolchain
 pacman -S make gcc diffutils pkg-config
 ```
