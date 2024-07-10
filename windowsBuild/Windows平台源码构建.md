@@ -493,17 +493,52 @@ NOTE: Object files are built at the place where configure is launched.
 - SDL库
 [SDL库下载需要适配具体ffmpeg版本](https://github.com/libsdl-org/SDL/releases/tag/release-2.0.18)
 ```
-pacman -S mingw-w64-x86_64-SDL2
+./configure --prefix=${basepath}/sdl_install_x86
+make -j4 && make install
 ```
+- 导出环境变量
+```sh
+export PKG_CONFIG_PATH=${basepath}/sdl_install_x86/lib/pkgconfig:$PKG_CONFIG_PATH
+echo ${PKG_CONFIG_PATH}
 ```
-pacman -S mingw-w64-i686-SDL2 
+- 进入目录${basepath}/sdl_install_x86/lib/pkgconfig调整sdl2.pc文件内容
+```
+# sdl pkg-config source file
+
+prefix=/e/gitSource/ffmpeg-4.4.1/sdl_install_x86
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/SDL2
+
+Name: sdl2
+Description: Simple DirectMedia Layer is a cross-platform multimedia library designed to provide low level access to audio, keyboard, mouse, joystick, 3D hardware via OpenGL, and 2D video framebuffer.
+Version: 2.0.18
+Requires:
+Conflicts:
+Libs: -L${libdir} -lSDL2
+Libs.private:
+Cflags: -I${includedir}
 ```
 
-- 查看安装位置
+### 引入x264
+- x264[下载地址1](https://github.com/corecodec/x264)&nbsp;[下载地址2](https://www.videolan.org/developers/x264.html)
+- 编译x264
+``` sh
+# 32位需要关闭线程不然编译过不了
+./configure --prefix=${basepath}/x264_install_x86 --enable-static --disable-thread
+# 64位
+#./configure --prefix=${basepath}/x264_install_x86 --enable-static
+make -j4 && make install
 ```
-pacman -Ql mingw-w64-i686-SDL2
+- 导出环境变量
 ```
-
+export PKG_CONFIG_PATH=${basepath}/x264_install_x86/lib/pkgconfig:$PKG_CONFIG_PATH
+echo ${PKG_CONFIG_PATH}
+```
+- 编译ffmpeg-4.4.1
+```
+./configure --prefix=ffmpeg-4.4.1_install_x86 --enable-gpl --enable-shared --enable-sdl2 --enable-libx264
+```
 ## 生成ffmpeg帮助文档
 - [doxygen下载](https://www.doxygen.nl/download.html)[Graphviz下载](https://graphviz.gitlab.io/_pages/Download/windows/graphviz-2.38.msi)
 - 打开 Doxywizard<br>
