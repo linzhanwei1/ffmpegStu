@@ -47,7 +47,7 @@ helloNdk.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not strip
 - HOST平台：`Linux 62881e6bba6c 5.4.0-181-generic #201-Ubuntu SMP Thu Mar 28 15:39:01 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux`
 - 
 ### 准备原材料
-- [下载android-ndk-r16b]()
+- [下载android-ndk-r16b](https://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip)
 - [下载当前时间段(2024)最新android-ndk-r27-linux.zip](https://googledownloads.cn/android/repository/android-ndk-r27-linux.zip)
 - [下载ffmpeg-3.4.13.tar.bz2](https://ffmpeg.org/releases/ffmpeg-3.4.13.tar.bz2)
 - [下载ffmpeg-6.1.1.tar.bz2](https://ffmpeg.org/releases/ffmpeg-6.1.1.tar.bz2)
