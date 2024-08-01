@@ -1,8 +1,8 @@
 # 编译android平台库文件
 ## 概述
-- 使用NDK环境交叉编译ffmpeg源代码，供android音视频开发使用.本文档会指导完成编译任务，从0编写构建脚本。\
-- 由于android(NDK)和ffmpeg都是更新比较频繁，版本众多，不同版本有历史差异，本文分别使用gcc和clang编译两版源代码。
-- 本文档主要描述构建的流程和注意事项，假设你具备基本的Linux操作的能力、sh脚本的基本知识等，如不具备请自行学习。
+- 使用NDK环境交叉编译ffmpeg源代码，供android音视频开发使用.本文档会指导读者完成编译任务，从0编写构建脚本。
+- 由于android(NDK)和ffmpeg更新比较频繁，版本众多，不同版本有历史差异存在兼容性问题，本文分别使用gcc和clang编译两版源代码。
+- 本文档主要描述构建的流程和注意事项，假设读者具备基本的Linux操作的能力、sh脚本的基本知识等，如不具备请自行学习。
 - 请仔细阅读文档，深刻理解其中的含义和思想
 ## 基础知识
 ### 本地编译
@@ -32,7 +32,7 @@ int main(int argc, char **argv) { return 0; }
 ```
 - 编译执行程序,输出a.out
 ```sh
-/home/book/download/android-ndk-r16b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin//aarch64-linux-android-gcc -c helloNdk.c
+/home/book/download/android-ndk-r16b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-gcc -c helloNdk.c
 ```
 - 查看输出文件的相关信息
 ```
